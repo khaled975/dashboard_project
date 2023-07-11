@@ -1,0 +1,20 @@
+.numbers-sec .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sec-bg);
+    padding: 20px 12px;
+    border-radius: 8px;
+}
+
+.numbers-sec .box .charts canvas{
+    max-width: 100% !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+.numbers-sec .box .charts canvas ~ div{
+    left: 50% !important;
+    top: 50% !important;
+    font-size: 10px !important;
+    color: var(--main-color) !important;
+}

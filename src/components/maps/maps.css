@@ -1,0 +1,11 @@
+.maps-sec .box{
+    background-color: var(--sec-bg);
+    padding: 20px 12px;
+    border-radius: 8px;
+}
+
+.maps-sec .box canvas{
+    max-height: 100%;
+    max-width: 100%;
+    height: 230px !important;
+}

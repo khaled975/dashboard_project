@@ -8,6 +8,8 @@ import Team from './components/team/Team';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom';
 import Auth from './components/auth/auth';
 // const navigate = useNavigate()
+import {FileBasedProvider} from 'react-router-filebased'
+
 
 function App() {
 const auth = localStorage.getItem('user')
@@ -18,25 +20,27 @@ const auth = localStorage.getItem('user')
         <Route index element={<MainLayout/>}/>
         <Route path='team' element={ <Team/>}/>
       </Route>
-      <Route path = 'login' element={<SignIn/>}/>
+      <Route path = '/login' element={<SignIn/>}/>
       <Route path ='*' element={<Error/>}/>
       </>
-    )
+    ) 
   )
   return (
     <div className="App">
-        {/* <Routes>
-          <Route path='/' element={<Layout/>}>
-              <Route index element={<MainLayout/>}/>
-                <Route path='team' element={<Team/>}/>
-        </Route>
+    {/* //     <Routes>
+    //       <Route path='/' element={<Layout/>}>
+    //           <Route index element={<MainLayout/>}/>
+    //             <Route path='team' element={<Team/>}/>
+    //     </Route>
         
-            <Route path = 'login' element={<SignIn/>}/>
-            <Route path ='*' element={<Error/>}/>
-        </Routes> */}
-      <RouterProvider router={router}/>
-    </div>
-  );
+    //         <Route path = 'login' element={<SignIn/>}/>
+    //         <Route path ='*' element={<Error/>}/>
+    //     </Routes> */}
+    <RouterProvider router={router}/> 
+     </div>
+    );
+      //  return <FileBasedProvider />
+
 }
 
 export default App;

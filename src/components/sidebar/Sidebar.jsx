@@ -11,7 +11,7 @@ const Sidebar = () => {
     setCollapsed(!collapsed);
   };
 //   const navigate = useNavigate
-  const auth = localStorage.getItem('user')
+  const auth = localStorage.getItem('token')
 //   const checkLogIn = ()=>{
 //     if(!auth){
 //         navigate('/login')
@@ -45,7 +45,7 @@ console.log(JSON.parse(auth));
                     <Row className="user-info">
                     <Col>
                         <img src={userImg} alt="img" className="user-img"/>
-                        <h2>Welcome {JSON.parse(auth).username}</h2>
+                        <h2>Welcome {JSON.parse(auth).data.name}</h2>
                     </Col>
                 </Row>
                 }

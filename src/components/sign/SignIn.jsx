@@ -3,15 +3,23 @@ import React, { useState } from 'react'
 import './sign.css'
 import { FacebookFilled, FacebookOutlined, GoogleOutlined, InstagramOutlined, LockOutlined, RightCircleOutlined, RightOutlined, UserOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 const SignIn = ()=>{
     const [username,setUsername] = useState('')
     const [password,setPassword] = useState('')
     const navigate = useNavigate()
     const getUserInfo = ()=>{
-        const user = localStorage.setItem('user',JSON.stringify({username,password}))
+       axios.post('https://alrayademo-back.appssquare.com/api/admin/login',{
+        email:username,
+        password:password
+       })
+       .then((res)=>{
+        const userToken = localStorage.setItem('token',JSON.stringify(res.data))
         navigate('/')
-        console.log(user);
+       })
+       .catch((err)=>{console.log(err.message);})
     }
+
     return (
         <>
             <section className='sign'>

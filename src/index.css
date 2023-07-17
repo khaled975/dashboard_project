@@ -23,7 +23,11 @@ body{
   box-bg >> primery 400
   hover item >> #868dfb
 */
-
+/* .App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 .App{
   display: flex;
   height: 100vh;

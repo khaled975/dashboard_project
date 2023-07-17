@@ -1,0 +1,17 @@
+.team-sec,
+.team-sec .box{
+    width: 100%;
+}
+
+.team-sec button.view{
+    color: #fff !important;
+    background-color: #1677ff !important;
+}
+.team-sec button.delete{
+    color: #fff !important;
+    background-color: #ff4d4f !important;
+}
+.team-sec button.update{
+    color: #fff !important;
+    background-color: #0DCAF0 !important;
+}
